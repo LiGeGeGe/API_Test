@@ -31,7 +31,7 @@ class Data(object):
         Sheet = Excel.sheet_by_index(0)#根据顺序获取sheet
         result = Sheet.cell(line,column).value#指定行和列获取数据
         return result
-        
+
 
     def GetData(self,file,line,column,name):
 
