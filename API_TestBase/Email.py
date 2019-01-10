@@ -12,23 +12,23 @@ send = Data()
 class TEST_Case(object):
     def __init__(self):
         pass
-    The_sender = '{}'.format(send.detal("stu.xls","E_email",1,1))
+    The_sender = '{}'.format(send.GetData("stu.xls","E_email",1,1))
     '''
         发件邮箱
     '''
-    Authorization = "{}".format(send.detal("stu.xls","E_email",1,2))
+    Authorization = "{}".format(send.GetData("stu.xls","E_email",1,2))
     '''
         邮箱授权码
     '''
-    The_recipient = '{}'.format(send.detal("stu.xls","E_email",1,0))
+    The_recipient = '{}'.format(send.GetData("stu.xls","E_email",1,0))
     '''
         收件邮箱
     '''
-    TEH_TEST = '{}'.format(send.detal("stu.xls","E_email",1,4))
+    TEH_TEST = '{}'.format(send.GetData("stu.xls","E_email",1,4))
     '''
     邮件文本
     '''
-    BODY = '{}'.format(send.detal("stu.xls","E_email",1,3))
+    BODY = '{}'.format(send.GetData("stu.xls","E_email",1,3))
     '''
         主题
     '''
@@ -70,7 +70,7 @@ class E_emai(TEST_Case):
         msg.attach(content)
         # 构造附件1，传送当前目录下  文件
         # now = time.strftime("%Y-%m-%d %H_%M_%S")
-        filename = "../TESTreport/" + filenmail
+        filename = "../APT_TestReport/" + filenmail
         att1 = MIMEText(open(filename, 'rb').read(), 'base64', 'utf-8')  # rb以二进制方式读取
         # att1["Content-Type"] = 'application/octet-stream'
         # filename为附件名称，可以任意写，写什么名字，邮件中显示什么名字

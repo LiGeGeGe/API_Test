@@ -26,6 +26,7 @@ class Data(object):
 
     def GetData(self,file,line,column):
 
+
         FileName = '../API_Data' + file
         Excel = xlrd.open_workbook(FileName)
         Sheet = Excel.sheet_by_index(0)#根据顺序获取sheet
