@@ -12,7 +12,7 @@ from API_TestBase import TestBase
 host = TestBase.Data()
 concet ={
 
-    "ENGINE": host.GetData("stu.xls","mysqldb",1,0),
+ #   "ENGINE": host.GetData("stu.xls","mysqldb",1,0),
     "host": host.GetData("stu.xls","mysqldb",1,1),
     "port": int(host.GetData("stu.xls","mysqldb",1,2)),
     "user": host.GetData("stu.xls","mysqldb",1,3),
@@ -22,5 +22,4 @@ concet ={
 
 
 }
-
 
