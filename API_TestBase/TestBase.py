@@ -34,10 +34,14 @@ class Data(object):
         return result
 
 
-    def GetData(self,file,line,column,name):
+    def GetData(self,file,name,line,column):
 
         FileName = '../API_Data/' + file
         Excel = xlrd.open_workbook(FileName)
         Sheet = Excel.sheet_by_name(name)
         result = Sheet.cell(line,column).value#指定行和列，获取数据
         return result
+
+    def Runsqlscript(self,sqlfile):
+        file = '../API_Data/' + sqlfile #获取sql语句
+        return  file

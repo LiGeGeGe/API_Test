@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3106143245">
-    <data-source source="LOCAL" name="MySQL - @10.10.184.210" uuid="a9a631fe-46cf-4694-956a-05bbf14c8ee8">
+  <component name="DataSourceManagerImpl" format="xml" hash="1376851988">
+    <data-source source="LOCAL" name="MySQL - test@10.10.184.210" uuid="ff8429b4-82d1-40d4-b820-7e391e354bd5">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://10.10.184.210:3306</jdbc-url>
-      <driver-properties>
-        <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="tinyInt1isBit" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="characterSetResults" value="utf8" />
-        <property name="yearIsDateType" value="false" />
-      </driver-properties>
-      <libraries />
-    </data-source>
-    <data-source source="LOCAL" name="MySQL - @10.10.184.210 [2]" uuid="4421f2df-c1b4-4802-ac38-062e995a8488">
-      <driver-ref>mysql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://10.10.184.210:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://10.10.184.210/test</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />
