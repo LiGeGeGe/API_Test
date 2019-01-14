@@ -11,8 +11,8 @@ import unittest
 import requests
 import json
 from BeautifulReport import BeautifulReport
-#json就是一个字典，只不过是字典里面嵌套着字典、列表，列表里面有嵌套着字典
-
+#字典，只不过是字典里面嵌套着字典、列表，列表里面有嵌套着字典
+#pkey需要开发设置时效
 
 class Apitest(unittest.TestCase):
 
