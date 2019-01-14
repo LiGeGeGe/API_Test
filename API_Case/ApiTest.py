@@ -15,7 +15,6 @@ from BeautifulReport import BeautifulReport
 
 class Apitest(unittest.TestCase):
 
-
     def  requests(self):
         host = "http://api.test.edu.wanfangdata.com.cn/api/" # host指固定的host地址或者ip+端口
         requests = "Huitu/GetBookListByCreateTime" #接口名称
