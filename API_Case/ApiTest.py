@@ -27,8 +27,11 @@ class Apitest(unittest.TestCase):
         data = {'StartTime':'946656000','endTime':'1506787200','PageNumber':'','PageSize':'','pkey':'ODgsMTMwLDEzNiwxNDAsMTcxLDEzMCwxNzIsMTQxLDEwOCwxMzQ=','organid':'e'}
         response = requests.post(url=requests_host,data=data)
         json_response = response.json()
-
-        print(json_response["TotalCount"]) #获取json中某个值
+        print("Success:" + str(json_response["Success"]))
+        print("Message:" + str(json_response["Message"]))
+        print("PageCount:" + str(json_response["PageCount"]))
+        print("PageNumber:" + str(json_response["PageNumber"]))
+        print("PageSize:" + str(json_response["PageSize"])) #获取json中某个值，获取检索结果数
 
 
 
