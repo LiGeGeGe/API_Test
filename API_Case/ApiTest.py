@@ -3,6 +3,7 @@
     主题：创建第一个case，用例框架unittest
     日期：2109/1/11
     创建人：test
+    改进：后期需要加一个循环判断返回的数据是json还是list列表
 '''
 
 __author__ = 'lixue'
@@ -10,7 +11,7 @@ import unittest
 import requests
 import json
 from BeautifulReport import BeautifulReport
-
+#json就是一个字典，只不过是字典里面嵌套着字典、列表，列表里面有嵌套着字典
 
 
 class Apitest(unittest.TestCase):
@@ -25,8 +26,11 @@ class Apitest(unittest.TestCase):
         requests_host = Apitest().requests()
         data = {'StartTime':'946656000','endTime':'1506787200','PageNumber':'','PageSize':'','pkey':'ODgsMTMwLDEzNiwxNDAsMTcxLDEzMCwxNzIsMTQxLDEwOCwxMzQ=','organid':'e'}
         response = requests.post(url=requests_host,data=data)
-        print(response.text,response.encoding)
-        print(response.json())
+        json_response = response.json()
+
+        print(json_response["TotalCount"]) #获取json中某个值
+
+
 
 
 
