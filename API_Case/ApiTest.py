@@ -8,6 +8,7 @@
 __author__ = 'lixue'
 import unittest
 import requests
+import json
 from BeautifulReport import BeautifulReport
 
 
@@ -15,17 +16,30 @@ from BeautifulReport import BeautifulReport
 class Apitest(unittest.TestCase):
 
 
+    def  requests(self):
+        host = "http://api.test.edu.wanfangdata.com.cn/api/" # host指
+        requests = "Huitu/GetBookListByCreateTime" #接口值
+        requests_host = host + requests
+        return requests_host #返回参数
+
     def test_GetBookListByCreateTime_Pkay(self):
-        response = requests.post("http://api.test.edu.wanfangdata.com.cn/api/Huitu/GetBookListByCreateTime")
-        print (response)
-        str_response = response.content
-        print(str_response)
-        status_code = response.status_code
-        print(status_code)
-        if status_code == 500:
-            print(u"测试通过,直接访问URL不加参数状态码为500")
-        else:
-             print(u"测试失败")
+        requests_host = Apitest().requests()
+        data = {'StartTime':'946656000','endTime':'1506787200','PageNumber':'','PageSize':'','pkey':'ODgsMTMwLDEzNiwxNDAsMTcxLDEzMCwxNzIsMTQxLDEwOCwxMzQ=','organid':'e'}
+        response = requests.post(url=requests_host,data=data)
+        print(response.text,response.encoding)
+        print(response.json())
+
+
+
+
+
+
+
+
+
+
+
+
 
     def test_AetBookListByCreateTime_Ckayfailure(self):
         response = requests.post("http://api.test.edu.wanfangdata.com.cn/api/Huitu/GetBookListByCreateTime")
@@ -50,13 +64,13 @@ class Apitest(unittest.TestCase):
 
 if __name__ == '__main__':
     p=Apitest()
-    # p.test_GetBookListByCreateTime_Pkay()
+    p.test_GetBookListByCreateTime_Pkay()
     # p.est_AetBookListByCreateTime_Pkayfailure()
 
 
     # test = unittest.TestSuite()#
     # test.addTest(Apitest("test_GetBookListByCreateTime_Pkay"))
 
-    test_suite = unittest.defaultTestLoader.discover('../API_Case/',pattern='ApiTest*.py')#discover方法找到path目录下所有测试用例组装到测试套件
-    result = BeautifulReport(test_suite)
-    result.report(filename='测试报告', description='GetBookListByCreateTime接口报告', log_path='../API_TestReport/')
+    # test_suite = unittest.defaultTestLoader.discover('../API_Case/',pattern='ApiTest*.py')#discover方法找到path目录下所有测试用例组装到测试套件
+    # result = BeautifulReport(test_suite)
+    # result.report(filename='测试报告', description='GetBookListByCreateTime接口报告', log_path='../API_TestReport/')
