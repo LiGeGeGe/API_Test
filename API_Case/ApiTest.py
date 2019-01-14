@@ -17,9 +17,9 @@ class Apitest(unittest.TestCase):
 
 
     def  requests(self):
-        host = "http://api.test.edu.wanfangdata.com.cn/api/" # host指
-        requests = "Huitu/GetBookListByCreateTime" #接口值
-        requests_host = host + requests
+        host = "http://api.test.edu.wanfangdata.com.cn/api/" # host指固定的host地址或者ip+端口
+        requests = "Huitu/GetBookListByCreateTime" #接口名称
+        requests_host = host + requests # 请求URL
         return requests_host #返回参数
 
     def test_GetBookListByCreateTime_Pkay(self):
