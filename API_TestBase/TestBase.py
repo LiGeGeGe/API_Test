@@ -51,3 +51,9 @@ class Data(object):
         assert json_response[key] == text
 
 
+    def requests(self,requests,url,data):#断言方法
+        if requests == "post":
+            response = requests.post(url=url,data=data)
+            return response
+
+
