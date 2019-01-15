@@ -8,7 +8,7 @@
 
 import xlwt
 import xlrd
-
+import requests
 '''
 book = xlrd.open_workbook('stu.xls') #打开一个excel
 sheet = book.sheet_by_index(0) #根据顺序获取sheet
@@ -25,8 +25,6 @@ for i in range(sheet.nrows): # 0 1 2 3 4 5
 class Data(object):
 
     def GetData(self,file,line,column):
-
-
         FileName = '../API_Data/' + file
         Excel = xlrd.open_workbook(FileName)
         Sheet = Excel.sheet_by_index(0)#根据顺序获取sheet
@@ -35,13 +33,21 @@ class Data(object):
 
 
     def GetData(self,file,name,line,column):
-
         FileName = '../API_Data/' + file
         Excel = xlrd.open_workbook(FileName)
         Sheet = Excel.sheet_by_name(name)
         result = Sheet.cell(line,column).value#指定行和列，获取数据
         return result
 
+
     def Runsqlscript(self,sqlfile):
         file = '../API_Data/' + sqlfile #获取sql语句
         return  file
+
+
+    def Assert(self,key,text,url,data):#断言方法
+        response = requests.post(url=url,data=data)
+        json_response = response.json()
+        assert json_response[key] == text
+
+

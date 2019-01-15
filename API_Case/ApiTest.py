@@ -28,15 +28,14 @@ class Apitest(unittest.TestCase):
         response = requests.post(url=requests_host,data=data)
         json_response = response.json()
         print("Success:" + str(json_response["Success"]))
+        succes = json_response["Success"]
         print("Message:" + str(json_response["Message"]))
         print("PageCount:" + str(json_response["PageCount"]))
         print("PageNumber:" + str(json_response["PageNumber"]))
         print("PageSize:" + str(json_response["PageSize"])) #获取json中某个值，获取检索结果数
 
-
-
-
-
+        assert json_response["Success"] == True #断言方法
+        assert json_response["Message"] == "已完成"
 
 
 
