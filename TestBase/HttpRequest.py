@@ -27,7 +27,7 @@ class RequestsMethods(object):
 
 
     def Runsqlscript(self,sqlfile):
-        file = '../API_Data/' + sqlfile #获取sql语句
+        file = '../Data/' + sqlfile #获取sql语句
         return  file
 
 

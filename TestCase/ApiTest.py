@@ -11,7 +11,7 @@ import requests
 
 import json
 from BeautifulReport import BeautifulReport
-from API_Mysqldb import GetData
+from DataConfig import GetData
 #字典，只不过是字典里面嵌套着字典、列表，列表里面有嵌套着字典
 #pkey需要开发设置时效
 
@@ -112,6 +112,6 @@ if __name__ == '__main__':
     # test = unittest.TestSuite()#
     # test.addTest(Apitest("test_GetBookListByCreateTime_Pkay"))
 
-    # test_suite = unittest.defaultTestLoader.discover('../API_Case/',pattern='ApiTest*.py')#discover方法找到path目录下所有测试用例组装到测试套件
+    # test_suite = unittest.defaultTestLoader.discover('../TestCase/',pattern='ApiTest*.py')#discover方法找到path目录下所有测试用例组装到测试套件
     # result = BeautifulReport(test_suite)
-    # result.report(filename='测试报告', description='GetBookListByCreateTime接口报告', log_path='../API_TestReport/')
+    # result.report(filename='测试报告', description='GetBookListByCreateTime接口报告', log_path='../TestReport/')

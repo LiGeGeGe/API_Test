@@ -6,7 +6,7 @@ import time
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
-from API_TestBase.HttpRequest import  Data
+from TestBase.HttpRequest import  Data
 send = Data()
 
 class TEST_Case(object):

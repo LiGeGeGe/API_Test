@@ -7,8 +7,8 @@
 '''
 __author__ = 'lixue'
 
-from API_TestBase import HttpRequest
-from API_Mysqldb import GetData
+from TestBase import HttpRequest
+from DataConfig import GetData
 
 host = GetData.Data()
 concet ={

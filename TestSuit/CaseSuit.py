@@ -4,8 +4,8 @@ import sys
 import time
 import  os
 
-from API_TestReport.HtmlReport import BeautifulReport
-Test_Case = "../API_Case"
+from TestReport.HtmlReport import BeautifulReport
+Test_Case = "../TestCase"
 
 file =  unittest.defaultTestLoader.discover(Test_Case,pattern='test*.py',top_level_dir=None)
 Begin_Time = time.strftime("%Y-%m-%d %H_%M_%S")

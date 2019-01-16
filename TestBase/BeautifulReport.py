@@ -63,7 +63,7 @@ FIELDS = {
 
 class PATH:
     """ all file PATH meta """
-    config_tmp_path = SITE_PAKAGE_PATH + '../API_TestBase/template'
+    config_tmp_path = SITE_PAKAGE_PATH + '../TestBase/template'
 
 
 class MakeResultJson:
