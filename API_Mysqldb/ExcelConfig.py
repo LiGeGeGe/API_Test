@@ -7,9 +7,10 @@
 '''
 __author__ = 'lixue'
 
-from API_TestBase import TestBase
+from API_TestBase import HttpRequest
+from API_Mysqldb import GetData
 
-host = TestBase.Data()
+host = GetData.Data()
 concet ={
 
  #   "ENGINE": host.GetData("stu.xls","mysqldb",1,0),

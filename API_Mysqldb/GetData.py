@@ -38,22 +38,3 @@ class Data(object):
         Sheet = Excel.sheet_by_name(name)
         result = Sheet.cell(line,column).value#指定行和列，获取数据
         return result
-
-
-    def Runsqlscript(self,sqlfile):
-        file = '../API_Data/' + sqlfile #获取sql语句
-        return  file
-
-
-    def Assert(self,key,text,url,data):#断言方法
-        response = requests.post(url=url,data=data)
-        json_response = response.json()
-        assert json_response[key] == text
-
-
-    def requests(self,requests,url,data):#断言方法
-        if requests == "post":
-            response = requests.post(url=url,data=data)
-            return response
-
-

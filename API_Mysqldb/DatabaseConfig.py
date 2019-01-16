@@ -1,13 +1,12 @@
 #-*- coding:UTF-8 -*-
 
-from API_Mysqldb import Setting
-from API_TestBase import TestBase
+from API_Mysqldb import ExcelConfig
 import urllib3
 import pymysql
 # sql = TestBase.Data()
 # sqlfile = sql.Runsqlscript("user.sql")
 
-connect = Setting.concet
+connect = ExcelConfig.concet
 # 打开数据库连接
 db  = pymysql.connect(host= connect.get("host"),
                     port=connect.get("port"),
