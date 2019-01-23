@@ -37,16 +37,28 @@ class RequestsMethods(object):
         assert json_response[key] == text
 
 
-    def requests(self,url,data,header=None):#post与get封装
+    def get_main(self,url,data,header=None):#post与get封装
         response = None
         if header != None:
-            response = requests(url=url,data=data,header=header)
-            return response
+            response = requests.get(url=url,data=data,header=header)
         else:
-            if requests == 'post':
-                response = requests.post(url=url,data=data)
-            else:
-                response = requests.get(url=url,data=data)
-            result = response.text()
-            return result
-    def post
+            response = requests.get(url=url,data=data)
+        return response.text()
+
+    def post_main(self,url,data,header=None):#post与get封装
+        response = None
+        if header != None:
+            response = requests.post(url=url,data=data,header=header,verify=False)
+        else:
+            response = requests.post(url=url,data=data,verify=False)
+        return response.text()
+
+
+    def run_main(self,request,url,data,header=None):
+        response = None
+        if request == 'post':
+              response = self.post_main(url,data,header)
+        else:
+             response = self.get_main(url,data,header)
+
+        return response.text()

@@ -24,3 +24,7 @@ concet ={
 
 }
 
+class ExcelAppconfig(object):
+    def table(self):
+
+
