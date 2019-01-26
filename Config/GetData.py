@@ -34,8 +34,8 @@ class Data(object):
 
     def GetData(self,line,column):
         Excel = Data.Sheet()
-        Sheet = Excel.sheet_by_index(0)#根据顺序获取sheet
-        result = Sheet.cell(line,column).value#指定行和列获取数据
+        Sheet = Excel.sheet_by_index(0) #根据顺序获取sheet
+        result = Sheet.cell(line,column).value #指定行和列获取数据
         return result
 
 
@@ -45,8 +45,6 @@ class Data(object):
         Sheet = Excel.sheet_by_name(name)
         result = Sheet.cell(line,column).value#指定行和列，获取数据
         return result
-
-
 
 
     def ForData(self,file):

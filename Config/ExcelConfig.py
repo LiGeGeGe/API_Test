@@ -8,7 +8,7 @@
 __author__ = 'lixue'
 
 from TestBase import HttpRequest
-from DataConfig import GetData
+from Config import GetData
 
 host = GetData.Data()
 concet ={

@@ -11,7 +11,7 @@ import requests
 
 import json
 from BeautifulReport import BeautifulReport
-from DataConfig import GetData
+from Config import GetData
 #字典，只不过是字典里面嵌套着字典、列表，列表里面有嵌套着字典
 #pkey需要开发设置时效
 

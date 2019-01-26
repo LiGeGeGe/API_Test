@@ -21,9 +21,9 @@ print(sheet.col_values(2)) #取第几列的数据
 for i in range(sheet.nrows): # 0 1 2 3 4 5
     print(sheet.row_values(i)) #取第几行的数据
 '''
-
+import configparser
+from Config import Readconfig
 class RequestsMethods(object):
-
 
 
     def Runsqlscript(self,sqlfile):

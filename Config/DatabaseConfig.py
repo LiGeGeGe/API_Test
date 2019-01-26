@@ -1,6 +1,6 @@
 #-*- coding:UTF-8 -*-
 
-from DataConfig import ExcelConfig
+from Config import ExcelConfig
 import urllib3
 import pymysql
 # sql = TestBase.Data()
